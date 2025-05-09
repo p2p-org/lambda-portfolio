@@ -7,7 +7,6 @@ async function listJobs(network?: string) {
   }
 
   const allJobs = [...jobs, getLlamaProtocolsJob(platforms)];
-  console.log(allJobs);
   const filteredJobs = allJobs
     .filter(
       (job) =>
