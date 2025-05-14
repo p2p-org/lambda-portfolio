@@ -11,12 +11,16 @@
       ],
       "options": {
         "outputPath": "dist/packages/webapp",
-        "main": "packages/webapp/src/index.ts",
+        "main": "packages/webapp/src/server.ts",
         "tsConfig": "packages/webapp/tsconfig.json",
         "assets": [
           "packages/webapp/*.md"
         ]
       }
+    },
+    "run": {
+      "command": "ts-node --project packages/webapp/tsconfig.json  packages/webapp/src/server.ts",
+      "dependsOn": []
     }
   },
   "tags": []
