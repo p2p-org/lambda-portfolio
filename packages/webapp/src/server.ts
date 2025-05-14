@@ -14,7 +14,7 @@ const start = async () => {
     const port = Number(process.env['PORT'] || 3001);
     const host = process.env['HOST'] || '0.0.0.0';
     await fastify.listen({ port, host });
-    logger.info(`🚀 Server is running on http://localhost:${port}`);
+    logger.info(`🚀 Server is running on http://localhost:${port} PID: ${process.pid}`);
   } catch (error) {
     logger.error(error, '❌ Server failed to start');
     process.exit(1);
