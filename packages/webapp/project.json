@@ -18,6 +18,10 @@
         ]
       }
     },
+    "build:docker": {
+      "command": "docker build . -t solana-portfolio:latest",
+      "dependsOn": []
+    },
     "run": {
       "command": "ts-node --project packages/webapp/tsconfig.json  packages/webapp/src/server.ts",
       "dependsOn": []
