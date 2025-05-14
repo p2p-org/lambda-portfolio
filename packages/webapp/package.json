@@ -1,9 +1,8 @@
 {
   "name": "@sonarwatch/portfolio-webapp",
-  "description": "Backend service for Solana portfolio",
   "version": "0.0.1",
   "type": "commonjs",
-  "main": "src/server.ts",
+  "description": "Backend service for Solana portfolio",
   "scripts": {
     "start": "ts-node ./src/server.ts",
     "dev": "nodemon --exec ts-node ./src/server.ts",
@@ -15,23 +14,6 @@
     "lint:fix": "eslint --fix .",
     "docker:build": "docker build . -t solana-portfolio:latest",
     "docker:run": "docker run --rm -it solana-portfolio:latest"
-  },
-  "lint-staged": {
-    "*.{js,ts,json,md,graphql}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{ts}": [
-      "eslint --cache --ext .ts"
-    ],
-    "*.{js,ts}": [
-      "eslint --fix --cache",
-      "git add"
-    ],
-    "locales/**/*.json": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "peerDependencies": {
     "@sonarwatch/portfolio-plugins": "^0.14.0"
