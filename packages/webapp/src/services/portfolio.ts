@@ -3,7 +3,7 @@ import {
   getCache,
   runFetchersByNetworkId,
 } from '@sonarwatch/portfolio-plugins';
-import { logger } from 'logger/logger';
+import { logger } from '../logger/logger';
 
 const cache = getCache();
 

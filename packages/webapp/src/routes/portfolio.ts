@@ -1,6 +1,6 @@
 import { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
-import { logger } from 'logger/logger';
-import { getPortfolio } from 'services/portfolio';
+import { logger } from '../logger/logger';
+import { getPortfolio } from '../services/portfolio';
 
 const initPortfolioRoutes = (app: FastifyInstance) => {
   app.get(

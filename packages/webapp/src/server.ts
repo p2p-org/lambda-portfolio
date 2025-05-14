@@ -1,8 +1,8 @@
 import Fastify from 'fastify';
 import dotenv from 'dotenv';
 
-import { fastifyLogger, logger } from 'logger/logger';
-import { initPortfolioRoutes } from 'routes/portfolio';
+import { fastifyLogger, logger } from './logger/logger';
+import { initPortfolioRoutes } from './routes/portfolio';
 
 const start = async () => {
   try {
