@@ -11,8 +11,8 @@ const start = async () => {
 
     initPortfolioRoutes(fastify);
 
-    const port = Number(process.env.PORT || 3001);
-    const host = process.env.HOST || '0.0.0.0';
+    const port = Number(process.env['PORT'] || 3001);
+    const host = process.env['HOST'] || '0.0.0.0';
     await fastify.listen({ port, host });
     logger.info(`🚀 Server is running on http://localhost:${port}`);
   } catch (error) {

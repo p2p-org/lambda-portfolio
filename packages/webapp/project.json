@@ -1,0 +1,23 @@
+{
+  "name": "webapp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/webapp/src",
+  "projectType": "webapp",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/webapp",
+        "main": "packages/webapp/src/index.ts",
+        "tsConfig": "packages/webapp/tsconfig.json",
+        "assets": [
+          "packages/webapp/*.md"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

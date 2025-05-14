@@ -33,23 +33,14 @@
       "git add"
     ]
   },
+  "peerDependencies": {
+    "@sonarwatch/portfolio-plugins": "^0.14.0"
+  },
   "dependencies": {
-    "@sonarwatch/portfolio-plugins": "0.14.186",
     "dotenv": "16.4.7",
     "fastify": "5.3.2",
     "pino": "9.6.0",
-    "pino-pretty": "13.0.0",
-    "libsodium": "0.7.13",
-    "ts-node": "10.9.2",
-    "typescript": "5.7.3"
-  },
-  "devDependencies": {
-    "@types/node": "22.13.5",
-    "eslint": "9.21.0",
-    "eslint-config-prettier": "10.0.1",
-    "nodemon": "3.1.9",
-    "prettier": "3.5.2",
-    "ts-node-dev": "2.0.0"
+    "pino-pretty": "13.0.0"
   }
 }
 
