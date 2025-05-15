@@ -2,16 +2,16 @@
 name: Build Portfolio Docker image & Push to Registry image
 
 on:
-#  workflow_dispatch:
-#    inputs:
-#      buildtag:
-#        description: 'Custom Tag'
-#        required: true
-#        type: string
-#      setlatest:
-#        description: 'Set latest tag'
-#        type: boolean
-#        default: false
+  workflow_dispatch:
+    inputs:
+      buildtag:
+        description: 'Custom Tag'
+        required: true
+        type: string
+      setlatest:
+        description: 'Set latest tag'
+        type: boolean
+        default: false
 #  push:
 #    branches:
 #      - main
