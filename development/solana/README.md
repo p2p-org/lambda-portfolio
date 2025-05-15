@@ -45,7 +45,7 @@ Jobs are periodic scripts that:
 Fetchers are executed per wallet address and:
 
 - Query on-chain data tied to the wallet (e.g. token accounts, staking positions)
-- Decode balances, claimable rewards, or LP shares
+- Decode balances, claimable rewards, or LP shares.
 - Return structured `PortfolioElement` objects for frontend display
 
 📍 **Examples**:
