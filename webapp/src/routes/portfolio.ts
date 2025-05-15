@@ -22,6 +22,13 @@ const initPortfolioRoutes = (app: FastifyInstance) => {
       return reply.send(result);
     },
   );
+
+  app.get(
+    '/test',
+    async (_req: FastifyRequest, reply: FastifyReply) => {
+      return reply.send('OK');
+    },
+  );
 };
 
 export { initPortfolioRoutes };
