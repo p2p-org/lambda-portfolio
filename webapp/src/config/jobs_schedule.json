@@ -608,5 +608,15 @@
     "intervalMs": 1080000,
     "tokenPrice": true,
     "ttl": "NOT_DEFINED"
+  },
+  "lavarage-pools": {
+    "intervalMs": 1080000,
+    "poolInfos": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "lavarage-pools": {
+    "intervalMs": 1080000,
+    "banks": true,
+    "ttl": "NOT_DEFINED"
   }
 }
