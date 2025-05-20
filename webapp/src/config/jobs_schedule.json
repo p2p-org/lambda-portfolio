@@ -1,4 +1,8 @@
 {
-  "kamino-farms": {},
-  "kamino-pools": {}
+  "kamino-farms": {
+    "intervalMs": 60000
+  },
+  "kamino-pools": {
+    "intervalMs": 60000
+  }
 }
