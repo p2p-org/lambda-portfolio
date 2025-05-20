@@ -503,5 +503,110 @@
     "intervalMs": 1080000,
     "tokenPrice": true,
     "ttl": "NOT_DEFINED"
+  },
+  "perena-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "fragmetric-pricing": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "divvy-house": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "houses": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "exponent-pt-prices": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "exponent-markets": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "markets": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "ratex-markets": {
+    "intervalMs": 1080000,
+    "programs": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "ratex-pt-prices": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "defituna-lending-pools": {
+    "intervalMs": 1080000,
+    "borrowLendRates": true,
+    "lendingPools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "iloop-markets": {
+    "intervalMs": 1080000,
+    "accounts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "pluto-earn-vaults": {
+    "intervalMs": 1080000,
+    "earnVaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "pluto-leverage-vaults": {
+    "intervalMs": 1080000,
+    "leverageVaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "pluto-leverage-vaults-api": {
+    "intervalMs": 1080000,
+    "leverageVaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "triad-markets": {
+    "intervalMs": 1080000,
+    "markets": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "coingecko-fiat": {
+    "intervalMs": 1080000,
+    "pricedCurrencies": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "pumpswap-markets": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "texture-pairs": {
+    "intervalMs": 1080000,
+    "pairs": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "hylo-markets": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "aprAndApy": true,
+    "ttl": "NOT_DEFINED",
+    "comment": "token yield TTL is default to 24h"
+  },
+  "oresupply-boost": {
+    "intervalMs": 1080000,
+    "boosts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "bio-token-stats": {
+    "intervalMs": 1080000,
+    "tokenStats": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "huma-token-stats": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
   }
 }
