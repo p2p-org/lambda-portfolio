@@ -226,5 +226,80 @@
     "intervalMs": 1080000,
     "tokenPrice": true,
     "ttl": "NOT_DEFINED"
+  },
+  "lifinity-xlfnty": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "port-pTokens": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "reserves": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "port-reserves": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "reserves": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "streamflow-merkles": {
+    "intervalMs": 1080000,
+    "merkles": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "streamflow-stakePools": {
+    "intervalMs": 1080000,
+    "stakePools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "pyth-pricing": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "drift-market-maker-vaults": {
+    "intervalMs": 1080000,
+    "vaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "flash-custodies": {
+    "intervalMs": 1080000,
+    "markets": true,
+    "custodies": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "flash-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "pools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "x-staking-solana": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "armada-staking-program-pools": {
+    "intervalMs": 1080000,
+    "pools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "symmetry-baskets": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "tulip-strategy-tokens": {
+    "intervalMs": 1080000,
+    "strategyVaults": true,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "tulip-lending-tokens": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
   }
 }
