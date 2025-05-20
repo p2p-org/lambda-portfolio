@@ -150,13 +150,81 @@
     "boostBanks": true,
     "ttl": "NOT_DEFINED"
   },
-
-
-
-  "kamino-farms": {
-    "intervalMs": 60000
-  },
   "kamino-pools": {
-    "intervalMs": 60000
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "kamino-reserves": {
+    "intervalMs": 1080000,
+    "borrowLendRates": true,
+    "reserves": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "kamino-farms": {
+    "intervalMs": 1080000,
+    "farms": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "kamino-markets": {
+    "intervalMs": 1080000,
+    "lendingMarkets": true,
+    "elevationGroups": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "realms-programs": {
+    "intervalMs": 1080000,
+    "goPrograms": true,
+    "registrars": true,
+    "ttl": "NOT_DEFINED",
+    "comment": "located in daos folder"
+  },
+  "maple-solana": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "flexlend-pools": {
+    "intervalMs": 1080000,
+    "allocations": true,
+    "ttl": "NOT_DEFINED",
+    "comment": "located in lulo folder"
+  },
+  "fluxbeam-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "jupiter-exchange-pricing": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "jupiter-exchange-custodies": {
+    "intervalMs": 1080000,
+    "custodiesInfo": true,
+    "pools": true,
+    "ttl": "NOT_DEFINED",
+    "comment": "token yield TTL is default to 24h"
+  },
+  "atrix-pools-v1": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "goosefx-dual-pools": {
+    "intervalMs": 1080000,
+    "poolStates": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "rain-collections": {
+    "intervalMs": 1080000,
+    "collections": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "rain-stJup": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
   }
 }
