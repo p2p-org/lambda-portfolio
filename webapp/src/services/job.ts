@@ -55,13 +55,11 @@ class JobRunner {
     const runWithThrottle = () => {
       if (this.runningJobsCount < this.jobsLimit) {
         logger.info(
-          `There is ${this.runningJobsCount} running job. Limit=${this.jobsLimit}`
+          `There is ${this.runningJobsCount} running job. Limit=${this.jobsLimit}. Queue=${this.jobsQueue.length}`
         );
         runTask();
       } else {
-        logger.info(
-          `Jobs Limit is reached. Waiting. Limit=${this.jobsLimit}`
-        );
+        logger.info(`Jobs Limit is reached. Waiting. Limit=${this.jobsLimit}. Queue=${this.jobsQueue.length}`);
         this.jobsQueue.push(runWithThrottle);
       }
     };
