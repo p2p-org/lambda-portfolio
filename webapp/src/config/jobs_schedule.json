@@ -398,5 +398,110 @@
     "intervalMs": 1080000,
     "solayerPools": true,
     "ttl": "NOT_DEFINED"
+  },
+  "solayer-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "solayer-delegate": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "picasso-unstaking-nfts": {
+    "intervalMs": 1080000,
+    "unstakingNfts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "quarry-rewarders": {
+    "intervalMs": 1080000,
+    "rewarders": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "quarry-redeemers": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "debridge-dlmm-vaults": {
+    "intervalMs": 1080000,
+    "vaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "stabble-pools": {
+    "intervalMs": 1080000,
+    "poolInfos": true,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "stabble-staked-pools": {
+    "intervalMs": 1080000,
+    "poolInfos": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "francium-lending-pool": {
+    "intervalMs": 1080000,
+    "lendingPools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "adrastea-positions": {
+    "intervalMs": 1080000,
+    "jlpPositions": true,
+    "usdcPositions": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "adrastea-lrtssol": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "elemental-pools": {
+    "intervalMs": 1080000,
+    "poolInfos": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "adrena-custodies": {
+    "intervalMs": 1080000,
+    "custodies": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "adrena-alp-price": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "loopscale-vaults": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "cachedVaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "vaultka-lending": {
+    "intervalMs": 1080000,
+    "lendings": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "vaultka-strategy": {
+    "intervalMs": 1080000,
+    "strategies": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "vaultka-banks": {
+    "intervalMs": 1080000,
+    "banks": true,
+    "borrowLendingRates": true,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "ensofi-solana-loans": {
+    "intervalMs": 1080000,
+    "borrowLendingRates": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "coinmarketcap-pricing": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
   }
 }
