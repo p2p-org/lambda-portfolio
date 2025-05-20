@@ -4,5 +4,17 @@
   },
   "kamino-pools": {
     "intervalMs": 60000
+  },
+  "wallet-tokens-solana": {
+    "intervalMs": 1080000
+  },
+  "token-lists-solana": {
+    "intervalMs": 518400000
+  },
+  "native-stake-solana-epoch": {
+    "intervalMs": 604800000
+  },
+  "native-stake-solana-validators": {
+    "intervalMs": 604800000
   }
 }

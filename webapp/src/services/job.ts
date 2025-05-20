@@ -13,7 +13,7 @@ class JobRunner {
   private runningJobsCount: number;
 
   private constructor() {
-    this.jobsLimit = 5;
+    this.jobsLimit = 10;
     this.runningJobsCount = 0;
     this.jobsQueue = [];
     this.scheduledTasks = [];
