@@ -301,5 +301,102 @@
     "intervalMs": 1080000,
     "tokenPrice": true,
     "ttl": "NOT_DEFINED"
+  },
+  "banx-markets": {
+    "intervalMs": 1080000,
+    "splMarkets": true,
+    "nfts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "banx-vaults": {
+    "intervalMs": 1080000,
+    "vaults": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "jito-vaults": {
+    "intervalMs": 1080000,
+    "vaults": true,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "sandglass-markets": {
+    "intervalMs": 1080000,
+    "markets": true,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "cropper-clmm": {
+    "intervalMs": 1080000,
+    "poolInfos": true,
+    "ttl": "NOT_DEFINED",
+    "comment": "Uses import from another protocol"
+  },
+  "hedgehog-amm": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "whalesmarket-tokens": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "tokens": true,
+    "tokensCount": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "futarchy-daos": {
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "futarchy-launchpad": {
+    "intervalMs": 1080000,
+    "launchAccounts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "citrus-collections": {
+    "intervalMs": 1080000,
+    "nfts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "sharky-collections": {
+    "intervalMs": 1080000,
+    "nfts": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "sharky-tokens-orderbook": {
+    "intervalMs": 1080000,
+    "orderBooks": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "sanctum-lsts": {
+    "intervalMs": 1080000,
+    "aprAndApy": true,
+    "ttl": "NOT_DEFINED",
+    "comment": "token yield TTL is default to 24h"
+  },
+  "allbridge-pools": {
+    "intervalMs": 1080000,
+    "pools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "famousfoxfederation-staking": {
+    "intervalMs": 1080000,
+    "stakingconfig": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "nxfinance-lending-pools": {
+    "intervalMs": 1080000,
+    "lendingPools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "nxfinance-staking-pool": {
+    "intervalMs": 1080000,
+    "stakingPools": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "nxfinance-solayer-pools": {
+    "intervalMs": 1080000,
+    "solayerPools": true,
+    "ttl": "NOT_DEFINED"
   }
 }
