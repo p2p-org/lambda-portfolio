@@ -1,54 +1,155 @@
 {
   "wallet-tokens-solana": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "token-lists-solana": {
-    "intervalMs": 518400000
+    "intervalMs": 518400000,
+    "tokenMeta": true,
+    "ttl": "7d"
   },
   "native-stake-solana-epoch": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "epoch???": true
   },
   "native-stake-solana-validators": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "validators": true
   },
   "switchboard-pricing": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "switchboard-ondemand-pricing": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "marginfi-banks": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "saber-lp-tokens": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "save-markets": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "markets": true
   },
   "save-reserves": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true,
+    "reserve": true,
+    "reserveTokenRates": true
   },
   "save-token2002wrapper": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "raydium-lp-tokens-api": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
   "raydium-farms": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "farmInfo": true
   },
   "raydium-farms-v6": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "farmInfo": true
   },
   "raydium-clmm": {
-    "intervalMs": 1080000
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
-  "raydium-cpmm" : {
-    "intervalMs": 1080000
+  "raydium-cpmm": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
   },
-
-
+  "orca-whirlpools": {
+    "intervalMs": 1080000,
+    "poolInfos": true
+  },
+  "orca-lp-tokens": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
+  },
+  "orca-whirlpools-stats": {
+    "intervalMs": 1080000,
+    "stats": true
+  },
+  "meteora-vaults": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
+  },
+  "meteora-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
+  },
+  "meteora-farms": {
+    "intervalMs": 1080000,
+    "farms": true
+  },
+  "meteora-multitoken-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
+  },
+  "meteora-dlmm": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
+  },
+  "meteora-dlmm-vaults": {
+    "intervalMs": 1080000,
+    "vaults": true
+  },
+  "meteora-stake-for-fee-vaults": {
+    "intervalMs": 1080000,
+    "vaults": true
+  },
+  "meteora-cpamm-pools": {
+    "intervalMs": 1080000,
+    "tokenPrice": true
+  },
+  "tensor-top-collections": {
+    "intervalMs": 5400000,
+    "nftCollections": true,
+    "ttl": "2H"
+  },
+  "drift-spotMarkets": {
+    "intervalMs": 1080000,
+    "oracleToMint": true,
+    "tokenToRate": true,
+    "markets": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "drift-premarket": {
+    "intervalMs": 1080000,
+    "price??": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "drift-perp-markets": {
+    "intervalMs": 1080000,
+    "merketIndexes": true,
+    "comment": "WEIRD CODE, LOOKS LIKE JOBS AND API SHOULD BE A SINGLE INSTANCE, SINCE IT USES IN_MEMORY CACHE",
+    "ttl": "NOT_DEFINED"
+  },
+  "mango-banks": {
+    "intervalMs": 1080000,
+    "banks": true,
+    "vaultMintRate": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "mango-groups": {
+    "intervalMs": 1080000,
+    "groupTokens": true,
+    "rootBank": true,
+    "ttl": "NOT_DEFINED"
+  },
+  "mango-boost-banks": {
+    "intervalMs": 1080000,
+    "boostBanks": true,
+    "ttl": "NOT_DEFINED"
+  },
 
 
 
