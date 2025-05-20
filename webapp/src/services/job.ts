@@ -1,5 +1,6 @@
 import { Cache, getCache, jobs } from '@sonarwatch/portfolio-plugins';
 import { logger } from '../logger/logger';
+import { ScheduleJobRequest } from '../model/job';
 
 class JobRunner {
   private static instance: JobRunner;
@@ -27,21 +28,24 @@ class JobRunner {
   }
 
   public schedule({ jobName, config }: ScheduleJobRequest) {
+    logger.info(`Scheduling job. Id=${jobName}`);
+
+    const job = jobs.find((job) => job.id === jobName);
+    if (!job) {
+      logger.warn(`Job not found. Could not be scheduled. Name=${jobName}`);
+      return;
+    }
+
     const runTask = async () => {
       this.runningJobsCount++;
       try {
-        const job = jobs.find((job) => job.id === jobName);
-        if (!job) {
-          logger.warn(`Job not found. Name=${jobName}`);
-          return;
-        }
         const startDate = Date.now();
-        logger.info(`Job found. Id=${jobName}`);
+        logger.info(`Running job. Id=${jobName}`);
         await job.executor(this.cache);
         const duration = ((Date.now() - startDate) / 1000).toFixed(2);
         logger.info(`Job finished. Id=${jobName} Duration=(${duration}s)`);
       } catch (err) {
-        console.error('Task failed:', err);
+        logger.error(err, `Job failed. Name=${jobName}`);
       } finally {
         this.runningJobsCount--;
         this.tryNext();
@@ -50,8 +54,14 @@ class JobRunner {
 
     const runWithThrottle = () => {
       if (this.runningJobsCount < this.jobsLimit) {
+        logger.info(
+          `There is ${this.runningJobsCount} running job. Limit=${this.jobsLimit}`
+        );
         runTask();
       } else {
+        logger.info(
+          `Jobs Limit is reached. Waiting. Limit=${this.jobsLimit}`
+        );
         this.jobsQueue.push(runWithThrottle);
       }
     };

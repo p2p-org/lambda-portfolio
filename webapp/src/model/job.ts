@@ -1,8 +1,8 @@
-interface ScheduleJobRequest {
+export interface ScheduleJobRequest {
   jobName: string;
   config: JobConfig;
 }
 
-interface JobConfig {
+export interface JobConfig {
   intervalMs: number;
 }
