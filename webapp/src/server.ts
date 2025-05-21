@@ -1,7 +1,9 @@
 import Fastify from 'fastify';
 import metricsPlugin from 'fastify-metrics';
-import dotenv from 'dotenv';
 import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 import { fastifyLogger, logger } from './logger/logger';
 import { initPortfolioRoutes } from './routes/portfolio';

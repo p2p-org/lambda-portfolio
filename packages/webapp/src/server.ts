@@ -2,13 +2,14 @@ import Fastify from 'fastify';
 import metricsPlugin from 'fastify-metrics';
 import dotenv from 'dotenv';
 
+dotenv.config();
+
 import { fastifyLogger, logger } from './logger/logger';
 import { initPortfolioRoutes } from './routes/portfolio';
 import { scheduleJobs } from './schedulers/job';
 
 const start = async () => {
   try {
-    dotenv.config();
     const mainServer = Fastify({ logger: fastifyLogger });
     const metricsServer = Fastify({ logger: fastifyLogger });
 
