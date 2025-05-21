@@ -43,7 +43,9 @@ class JobRunner {
         logger.info(`Running job. Id=${jobName}`);
         await job.executor(this.cache);
         const duration = ((Date.now() - startDate) / 1000).toFixed(2);
-        logger.info(`Job finished. Id=${jobName} Duration=(${duration}s)`);
+        logger.info(
+          `Job finished. Id=${jobName} Duration=(${duration}s) Queue=${this.jobsQueue.length} RunningJobs=${this.runningJobsCount}`
+        );
       } catch (err) {
         logger.error(err, `Job failed. Name=${jobName}`);
       } finally {
@@ -59,7 +61,9 @@ class JobRunner {
         );
         runTask();
       } else {
-        logger.info(`Jobs Limit is reached. Waiting. Limit=${this.jobsLimit}. Queue=${this.jobsQueue.length}`);
+        logger.info(
+          `Jobs Limit is reached. Waiting. Limit=${this.jobsLimit}. Queue=${this.jobsQueue.length}`
+        );
         this.jobsQueue.push(runWithThrottle);
       }
     };
