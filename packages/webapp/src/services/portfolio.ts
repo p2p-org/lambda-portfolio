@@ -4,12 +4,18 @@ import {
   getCache,
   runFetchersByNetworkId,
 } from '@sonarwatch/portfolio-plugins';
-import { logger } from '../logger/logger';
+import {
+  Token,
+  TokenList,
+} from '@sonarwatch/portfolio-plugins/src/plugins/tokens/types';
+import { TokenInfo } from '@sonarwatch/portfolio-core';
+import { tokenListsPrefix } from '@sonarwatch/portfolio-plugins/src/plugins/tokens/constants';
 
 class PortfolioService {
   private static instance: PortfolioService;
 
   private readonly cache: Cache;
+  private tokensMap?: Record<string, Token>;
 
   private constructor() {
     this.cache = getCache();
@@ -33,14 +39,30 @@ class PortfolioService {
     const addresses: string[] = [];
     result.elements.forEach((element) => {
       if (element.type === 'multiple') {
-        element.data.assets.forEach(
-          (a) => a.data.address && addresses.push(a.data.address)
-        );
+        element.data.assets
+          .filter((a) => a.type === 'token')
+          .forEach((a) => a.data.address && addresses.push(a.data.address));
       }
     });
-    logger.info(addresses, 'Tokens collected.');
-    const tokenInfo = await this.cache.getTokenPrices(addresses, 'solana');
-    logger.info(tokenInfo, 'Tokens are laded');
+
+    if (!this.tokensMap) {
+      const tokenList = await this.cache.getItem<TokenList>('solana', {
+        prefix: tokenListsPrefix,
+      });
+      this.tokensMap = tokenList?.tokens.reduce((acc, token) => {
+        acc[token.address] = token;
+        return acc;
+      }, {} as Record<string, Token>);
+    }
+    const tokenInfo = addresses.reduce((acc, address: string) => {
+      const token = this.tokensMap && this.tokensMap[address];
+      acc[address] = token && {
+        ...token,
+        networkId: 'solana',
+        extensions: undefined,
+      };
+      return acc;
+    }, {} as Record<string, TokenInfo | undefined>);
     return { ...result, tokenInfo };
   };
 }
