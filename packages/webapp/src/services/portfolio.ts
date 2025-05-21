@@ -54,7 +54,7 @@ class PortfolioService {
         return acc;
       }, {} as Record<string, Token>);
     }
-    const tokenInfo = addresses.reduce((acc, address: string) => {
+    const tokenInfoMap = addresses.reduce((acc, address: string) => {
       const token = this.tokensMap && this.tokensMap[address];
       acc[address] = token && {
         ...token,
@@ -63,7 +63,7 @@ class PortfolioService {
       };
       return acc;
     }, {} as Record<string, TokenInfo | undefined>);
-    return { ...result, tokenInfo };
+    return { ...result, tokenInfo: { solana: tokenInfoMap } };
   };
 }
 
