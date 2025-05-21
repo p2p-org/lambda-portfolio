@@ -47,7 +47,7 @@ class JobRunner {
           `Job finished. Id=${jobName} Duration=(${duration}s) Queue=${this.jobsQueue.length} RunningJobs=${this.runningJobsCount}`
         );
       } catch (err) {
-        logger.error(err, `Job failed. Name=${jobName}`);
+        logger.error({ error: err }, `Job failed. Name=${jobName}`);
       } finally {
         this.runningJobsCount--;
         this.tryNext();
