@@ -1,6 +1,7 @@
 import Fastify from 'fastify';
 import metricsPlugin from 'fastify-metrics';
 import dotenv from 'dotenv';
+import axios from 'axios';
 
 import { fastifyLogger, logger } from './logger/logger';
 import { initPortfolioRoutes } from './routes/portfolio';
@@ -8,6 +9,7 @@ import { scheduleJobs } from './schedulers/job';
 
 const start = async () => {
   try {
+    axios.defaults.timeout = 120000;
     dotenv.config();
     const mainServer = Fastify({ logger: fastifyLogger });
     const metricsServer = Fastify({ logger: fastifyLogger });
