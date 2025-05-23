@@ -12,13 +12,11 @@ on:
         description: 'Set latest tag'
         type: boolean
         default: false
-#  push:
-#    branches:
-#      - main
-#    tags:
-#      - "v*"
-  pull_request:
-    types: [ opened, synchronize, reopened ]
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
 
 jobs:
   build-images:
@@ -48,9 +46,9 @@ jobs:
             us-central1-docker.pkg.dev/p2p-data-lambda/images/lambda-portfolio-api
           tags: |
             type=ref,event=tag
-            type=sha,enable=true
+            type=sha,enable=${{ github.ref == 'refs/heads/main' }}
             type=raw,value=${{ inputs.buildtag }},enable=${{ github.event_name == 'workflow_dispatch' }}
-            type=raw,value=latest,enable=true
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
             type=raw,value=latest,enable=${{ github.event_name == 'workflow_dispatch' && inputs.setlatest }}
           flavor: |
             latest=auto
