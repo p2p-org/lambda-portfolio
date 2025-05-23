@@ -16,15 +16,15 @@ const start = async () => {
     const mainServer = Fastify({ logger: fastifyLogger });
     const metricsServer = Fastify({ logger: fastifyLogger });
 
-    mainServer.register(metricsPlugin, {
-      endpoint: null,
-      defaultMetrics: { enabled: true },
-      routeMetrics: { enabled: true },
-    });
-    metricsServer.register(metricsPlugin, {
+    await metricsServer.register(metricsPlugin, {
       endpoint: '/metrics',
       defaultMetrics: { enabled: false },
       routeMetrics: { enabled: false },
+    });
+    await mainServer.register(metricsPlugin, {
+      endpoint: null,
+      defaultMetrics: { enabled: true },
+      routeMetrics: { enabled: true },
     });
 
     const isJobRunner = process.env.PORTFOLIO_JOB_RUNNER === 'true';
