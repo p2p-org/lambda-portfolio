@@ -18,6 +18,6 @@ export type Data = {
 export type MerkleInfo = {
   address: string;
   mint: string;
-  unlockPeriod: BigNumber;
+  unlockPeriod?: BigNumber;
 };
 export type StakePoolInfo = MerkleInfo & { stakeMint: string };
