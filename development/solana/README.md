@@ -144,6 +144,11 @@ npx nx run tx-parser:run BBkoocctRizBPsu2WRHx5xvpd21UHx6ARVEDGVw7sAFa
  npx nx run plugins:run-job token-lists-solana
  npx nx run plugins:run-job wallet-tokens-solana
 ```
+7. If you need to debug something, the next code to the script section of 
+   `package.json` in the root folder, and run it debug mode from IDE 
+```
+"merkles": "npx nx run plugins:run-fetcher streamflow-merkles Hp8SsZZZot8UB28HTfEuxxCXECoSiwHfpzqwenjrMPKF",
+```
 
 ---
 
