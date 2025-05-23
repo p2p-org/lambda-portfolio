@@ -7,6 +7,9 @@ import v8 from 'v8';
 dotenv.config();
 axios.defaults.timeout = 120000;
 
+dotenv.config();
+axios.defaults.timeout = 120000;
+
 import { fastifyLogger, logger } from './logger/logger';
 import { initPortfolioRoutes } from './routes/portfolio';
 import { scheduleJobs } from './schedulers/job';
